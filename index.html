@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-      aisjfijsndfsjdm
-      aspkfjsodfsdf
+<body class="bg-rose-500 font-sans">
+  <!-- Navbar -->
+  <nav class="bg-rose-200 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-14">
+      <div class="text-white font-bold text-xl">LOGO</div>
+      <ul class="flex space-x-6">
+        <li><a href="" class="text-white font-semibold hover:text-yellow-300">Home</a></li>
+        <li><a href="" class="text-white font-semibold hover:text-yellow-300">About</a></li>
+        <li><a href="" class="text-white font-semibold hover:text-yellow-300">Gallery</a></li>
+        <li><a href="" class="text-white font-semibold hover:text-yellow-300">Chat</a></li>
+        <li><a href="" class="text-white font-semibold hover:text-yellow-300">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ฟอร์มเข้าสู่ระบบ -->
+  <div class="flex flex-col items-center mt-12">
+    <h1 class="text-5xl font-[cursive] text-yellow-300 mb-8">Christmas</h1>
+    <div class="w-80">
+      <!-- ชื่อผู้ใช้ -->
+      <div class="mb-6">
+        <label for="username" class="block mb-2 text-yellow-300 font-bold">ชื่อผู้ใช้</label>
+        <input type="text" id="username" placeholder="กรอกชื่อผู้ใช้"
+          class="w-full p-3 rounded-lg border-none focus:ring-2 focus:ring-yellow-300 outline-none" />
+      </div>
+
+      <!-- รหัสผ่าน -->
+      <div class="mb-6">
+        <label for="password" class="block mb-2 text-yellow-300 font-bold">รหัสผ่าน</label>
+        <input type="password" id="password" placeholder="กรอกรหัสผ่าน"
+          class="w-full p-3 rounded-lg border-none focus:ring-2 focus:ring-yellow-300 outline-none" />
+        <div class="text-right mt-2">
+          <a href="" class="text-yellow-300 text-sm hover:underline">ลืมรหัสผ่าน?</a>
+        </div>
+      </div>
+
+      <!-- ปุ่มเข้าสู่ระบบ -->
+      <button
+        class="w-full bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-3 rounded-lg shadow-md">
+        เข้าสู่ระบบ
+      </button>
+    </div>
+  </div>
 </body>
 </html>
