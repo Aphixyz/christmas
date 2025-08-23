@@ -467,7 +467,9 @@
                   placeholder="Enter message..."
                   required
                 />
-                <button type="submit" class="btn btn-common">Send message</button>
+                <button type="submit" class="btn btn-common">
+                  Send message
+                </button>
               </form>
             </div>
           </div>
@@ -498,10 +500,38 @@
               // ตอบกลับอัตโนมัติ (mock bot)
               setTimeout(() => {
                 let reply = "ขอบคุณที่ทักมานะครับ 🎄";
-                if (msg.includes("ของขวัญ")) {
-                  reply = "คุณอยากได้ไอเดียของขวัญคริสต์มาสไหมครับ? 🎁";
-                } else if (msg.includes("สวัสดี")) {
+
+                // เพิ่มเงื่อนไขตอบกลับ
+                if (msg.includes("สวัสดี")) {
                   reply = "สวัสดีครับ 😃 ขอให้มีความสุขในวันคริสต์มาส!";
+                } else if (msg.includes("ของขวัญ")) {
+                  reply = "คุณอยากได้ไอเดียของขวัญคริสต์มาสไหมครับ? 🎁";
+                } else if (msg.includes("ปีใหม่")) {
+                  reply =
+                    "สวัสดีปีใหม่ล่วงหน้านะครับ 🎉 ขอให้ปีนี้เต็มไปด้วยความสุข!";
+                } else if (msg.includes("เพลง")) {
+                  reply =
+                    "คุณอยากฟังเพลงคริสต์มาสไหมครับ? 🎶 Jingle Bells ~ 🎶";
+                } else if (msg.includes("ตกแต่ง")) {
+                  reply =
+                    "การตกแต่งคริสต์มาสยอดฮิตคือ ต้นสน, ไฟประดับ และถุงเท้าแดง 🎄✨";
+                } else if (msg.includes("อาหาร")) {
+                  reply =
+                    "อาหารคริสต์มาสที่นิยมก็มี Turkey, พาย, และคุกกี้ขิง 🍗🍪";
+                } else if (msg.includes("ขอบคุณ")) {
+                  reply = "ยินดีมากเลยครับ 🥰 ขอให้คุณมีวันที่สดใส!";
+                } else {
+                  // คำตอบสุ่มถ้าไม่เข้าเงื่อนไข
+                  const randomReplies = [
+                    "เมอร์รี่คริสต์มาสนะครับ 🎄✨",
+                    "หวังว่าคุณจะมีความสุขในช่วงวันหยุดนี้ 🛷",
+                    "วันนี้อากาศเย็น ๆ เหมาะกับช็อคโกแลตร้อนเลย ☕",
+                    "ถ้าอยากคุยเรื่องคริสต์มาส พิมพ์คำว่า ของขวัญ, เพลง หรือ ตกแต่ง ได้นะครับ 🎅",
+                  ];
+                  reply =
+                    randomReplies[
+                      Math.floor(Math.random() * randomReplies.length)
+                    ];
                 }
 
                 const botMsg = document.createElement("div");
